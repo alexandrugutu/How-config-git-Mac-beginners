@@ -1,0 +1,39 @@
+ git --version
+
+выбрать папку на компе и войти :
+ cd /Users/test/Documents/IT-Acad/
+
+Настроить емайл и логин :
+ git  config --global user.email "aleksgutu@gmail.com"
+ git  config --global user.name "alexandrugutu"
+
+
+Инициализируем пустую папку нашего репозитория. Это добавило срытую папку (с фаилами) с названием .git :
+ git init
+
+чтоб увидеть эту скрытую папку на MacBook :
+default write com.apple.finder AppleShowAllFiles YES
+
+Далее, на пример , создаем новый фаил text2.txt:
+ touch text2.txt
+
+Добавляем в git:
+ git add text2.txt 
+
+Смотрим статус:
+ git status
+
+Отправляем это изменемия в свой акаунта на GitHub.com:
+ git push
+
+Если на маке выводит Permission to .. .git denied , или Error 403. Это означяет, ранее кто-то уже настроил себе логин/пароль для доступа на GitHub.com. По этому, на маке, через поиск заходим на Keychain Access и задаем свои реквизиты логин/пароль. 
+
+1-In Finder, search for the Keychain Access app.
+2In Keychain Access, search for github.com.
+3-Find the "internet password" entry for github.com.
+4-Edit or delete the entry accordingly.
+
+Затем еще раз пробуем:
+ git push
+
+Проверяем в GitHub.com. Новый фаил должен тем появится.
